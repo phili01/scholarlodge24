@@ -1,0 +1,136 @@
+.section-largeItem {
+    background-color: $mainGray;
+    padding: 10px 5px 0 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    
+    position: relative;
+    top: 110px;
+    
+    @mixin atSmall {
+       border: 1px solid $mainGray;
+        padding: 10px;
+        top: auto;
+    }
+    
+     &__content {
+          border: 1px solid rgba($mainBlue, .3);
+          
+          padding-bottom: 10px;
+          margin-bottom: 20px;
+         background-color: #fff;
+         
+         @mixin atSmall {
+             border: none; 
+             padding-bottom: 40px;
+             @mixin border-color-b;
+             border: 1px solid $mainGray;
+         }
+
+         &--details{
+             @mixin clearfix;
+            padding: 10px 0;
+             
+             &__title {
+                 float: left;
+                 font-size: .6rem;
+                 font-style: italic;
+                 cursor: pointer;
+                 padding-left: 10px;
+                 
+                 @mixin atSmall {
+                     font-size: .75rem;
+                 }
+             }
+             
+             &__icon {
+                 float: right;
+                 color: #777;
+                 cursor: pointer;
+                 padding-right: 20px;
+                 
+                 &:hover {
+                     color: #333;
+                 }
+             }
+         }
+         
+         &--title {
+             padding: 0 10px 0 10px;
+             color: #333;
+             cursor: pointer;
+             font-size: 13px;
+             line-height: 1.5;
+             
+             @mixin atSmall {
+               font-size: 15px;
+             }
+             
+             @mixin atMedium {
+                 font-size: 17px; 
+             }
+             
+             &__details {
+                 font-size: 12px;
+                 font-style: italic;
+                 padding-left: 15px;
+                 font-weight: 300;
+             }
+         }
+         
+         &--photo {
+/*             max-height: 250px;*/
+             max-width: 100%;
+             margin: 0 auto;
+             overflow: hidden;
+             overflow-y: auto;
+             padding: 0 10px;
+         }
+         
+         ul {
+             @mixin clearfix;
+             list-style: none;
+             margin: 0;
+             padding: 0 0 0 10px;
+             position: relative;
+         }
+         
+         li {
+             
+             margin:  0 10px 10px 0px;
+             font-size: .75rem;
+             cursor: pointer;
+             font-family: Raleway;
+ 
+             
+             &:first-child {
+                 margin-left: 0;
+                 font-size: .75rem;
+                 
+                 @mixin atSmall {
+                     float: left;
+                     top: -3px;
+                     left: 0;
+                    font-size: .9rem;
+                     display: block;
+                 }
+                 
+             }
+
+             @mixin atSmall{
+                 font-size: .9rem;
+                 float: left;
+                 margin:  0 10px 10px 10px;
+             }
+             
+             &:last-child> a {
+                 &:hover {
+                     color: $mainRed;
+                     font-size: 1rem;
+                     transition: all .3s;
+                     position: relative;
+                 }
+             }
+         }
+    }
+}

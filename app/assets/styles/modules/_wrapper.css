@@ -1,0 +1,23 @@
+.wrapper {
+     position: relative;
+    max-width: 1200px;
+    
+    &__medium {
+     max-width: 1200px;
+     margin: 0 auto;
+    }
+    
+    &__large {
+      margin: 0 auto;
+      padding: 0 5px;
+      max-width: 1210px;
+/*      position: relative;*/
+/*      top: 90px;*/
+        
+        @mixin atSmall {
+            padding: 0 18px;
+            max-width: 1236px;
+        }
+    }
+    
+}

@@ -1,0 +1,34 @@
+.icon {
+    &--white {
+        color: #fff;
+    }
+    
+    &--header__l-margin {
+        margin-left: 5px;
+        font-size: 18px;
+    }
+    &--header__r-margin {
+        margin-left: 5px;
+    }
+    
+    &--red {
+        color: $mainRed;
+    }
+    
+    
+    &--section__r-margin {
+        margin-right: 5px;
+    }
+  
+    &--section__l-margin {
+        margin-left: 5px;
+    }
+    
+    &--section__large-l-margin {
+        margin-left: 20px;
+    }
+    
+    &--section-largeitem__r-margin {
+        margin-right: 5px;
+    }
+}

@@ -1,0 +1,87 @@
+.row {
+	
+	@mixin clearfix;
+	
+	&--t-padding {
+		padding-top: 20px;
+	}
+	
+	&--gutters {
+		margin-right: -45px;
+	}
+	
+
+
+/*
+	&--gutters > div {
+		padding-right: 45px;
+	}
+*/
+	
+    
+    @mixin atSmall {
+        
+        &__large {
+            width: 100%;
+/*            padding: 0 10px;*/
+             position: relative;
+             top: 110px;
+            margin: 0 auto;
+        }
+    }
+  
+    @mixin atMedium {
+        &__small {
+            float: left;
+            width: 30%;
+            position: fixed;
+            top: 80px;
+        }
+        
+        &__large {
+            float: left;
+            width: 68%;
+            padding: 0 10px;
+             position: relative;
+             top: 80px;
+            left: 32%;
+        }
+    }
+
+    @mixin atLarge {
+        
+        &__small {
+            float: left;
+            width: 20.67%;
+            padding: 0 10px;
+        
+            @mixin atLarge {
+                position: sticky;
+                top: 90px;
+/*                background: $mainGray;*/
+/*                border: 1px solid $mainGray;*/
+                padding: 0 0px;
+            }
+        }
+        
+        &__medium {
+            float: right;
+            width: 30%;
+            position: sticky;
+            top: 90px;
+/*            right: .8%;*/
+            left: 90.6%;
+        }
+        
+        &__large {
+            float: left;
+            width: 49.33%;
+             position: relative;
+             top: 90px;
+            left: 0%;
+            padding: 0 20px;
+        }
+        
+    }
+
+}

@@ -1,0 +1,162 @@
+.section-itemmedium {
+    
+    position: absolute;
+    margin-top: 10px;
+    top: 0;
+    width: 100%;
+    display: none;
+    @mixin atLarge {
+        display: block;
+        position: relative;
+        width: 100%;
+    }
+    
+    &__active-users {
+        position: absolute;
+        max-width: 70px;
+        background-color: $mainBlue;
+        height: 86vh;
+        overflow: hidden;
+        cursor: all-scroll;
+        z-index: 2;
+        
+        &--image {
+            height: 50px;
+            width: 50px;
+            margin: 0 10px;
+            overflow: hidden;
+            border-radius: 25px;
+            border: 3px solid #fff;
+            cursor: pointer;
+            margin-bottom: 10px;
+            margin-top: 20px;
+            
+            &:hover {
+                border: 2px solid #fff;
+            }
+        }
+        
+        &--search {
+            text-align: center;
+            color: #fff;
+            padding: 10px 0;
+            font-size: 18px;
+        }
+    }
+    
+    &--chat {
+        width: 100%;
+        padding-left: 10px;
+        position: absolute;
+        right: 0;
+        background-color: $mainGray;
+        z-index: 1;
+        
+        &__details {
+            background-color: $mainGray;
+            padding: 20px 0px 20px 80px;
+            box-shadow: 0px 3px 16px 0px rgba(102, 102, 102, 0.53);
+             -moz-box-shadow: 0px 0px 16px 0px rgba(102, 102, 102, 0.53);
+             -o-box-shadow: 0px 3px 16px 0px rgba(102, 102, 102, 0.53);
+             -ms-box-shadow: 0px 0px 16px 0px rgba(102, 102, 102, 0.53);
+             -webkit-box-shadow: 0px 3px 6px 0px rgba(102, 102, 102, 0.53);
+            
+            &--title{
+                font-size: 15px;
+                color: #333;
+                margin: 0 0 10px 0;
+            }
+            &--icon {
+                margin: 0 0 0 20px;
+                font-size: 20px;
+                cursor: pointer;
+                
+                &:hover {
+                    color: $mainRed
+                }
+            }
+            
+            select {
+            cursor: pointer;
+            box-shadow: 0px 0px 3px 0.63px rgba(83, 97, 125, 0.23);
+               -o-box-shadow: 0px 0px 3px 0.63px rgba(83, 97, 125, 0.23);
+               -ms-box-shadow: 0px 0px 3px 0.63px rgba(83, 97, 125, 0.23);
+               -webkit-box-shadow: 0px 0px 3px 0.63px rgba(83, 97, 125, 0.23);
+               -moz-box-shadow: 0px 0px 3px 0.63px rgba(83, 97, 125, 0.23);
+            border: none;
+            font-size: 14px;
+            padding: 5px 5px;
+            
+            &:hover {
+                box-shadow: 0px 0px 3px 2px rgba(83, 97, 125, 0.23);
+               -o-box-shadow: 0px 0px 3px 3px rgba(83, 97, 125, 0.23);
+               -ms-box-shadow: 0px 0px 3px 3px rgba(83, 97, 125, 0.23);
+               -webkit-box-shadow: 0px 0px 3px 3px rgba(83, 97, 125, 0.23);
+               -moz-box-shadow: 0px 0px 3px 3px rgba(83, 97, 125, 0.23);
+            }
+         }
+        }
+        
+        &__content {
+            height: 86vh;
+            overflow: hidden;
+            overflow-y: auto;
+            overflow-x: hidden;
+            position: relative;
+            padding-top: 120px;
+            border: 1px solid #e0e0e0;
+            width: 100%;
+            background-color: #f8f8f8;
+            padding-bottom: 50px;
+            &--chat {
+                margin-left: 80px;
+                width: 70%;
+                height: 100px;
+               background-color: green;
+                margin-bottom: 30px;
+                position: relative;
+                
+                &__left {
+                    margin-left: 100px;
+                    width: 65%;
+                    height: 100px;
+                    background-color: green;
+                    margin-bottom: 40px;
+                }
+            }
+            
+            &--form {
+                position: absolute;
+                bottom: 0;
+/*                left: 75px;*/
+/*                 right: 80px;*/
+                    padding-left: 80px;
+/*                padding-bottom: 20px;*/
+                background-color: $mainGray;
+                border: 1px solid #e0e0e0;
+               width: 100%;
+                padding: 10px 0 10px 80px;
+                    
+                &__input {
+                    padding: 10px 0;
+                    margin-top: 3px;
+                }
+                
+                &__send {
+                    padding: 10px;
+                    position: absolute;
+                    cursor: pointer;
+                    top: 15px;
+                    background-color: $mainBlue;
+                    border: none;
+                    color: #fff;
+                    font-weight: 300;
+                    
+                }
+            }
+            
+            
+            
+        }
+    }
+}

@@ -1,0 +1,639 @@
+.site-header {
+
+ @mixin clearfix;
+ width: 100%;
+ position: fixed;
+ padding-bottom: 10px;
+ background-color: #fff;
+    z-index: 3;
+ box-shadow: 0px 0px 16px 0px rgba(102, 102, 102, 0.53);
+ -moz-box-shadow: 0px 0px 16px 0px rgba(102, 102, 102, 0.53);
+ -o-box-shadow: 0px 0px 16px 0px rgba(102, 102, 102, 0.53);
+ -ms-box-shadow: 0px 0px 16px 0px rgba(102, 102, 102, 0.53);
+ -webkit-box-shadow: 0px 0px 16px 0px rgba(102, 102, 102, 0.53);
+
+    @mixin atLarge {
+        margin-top: 0px;
+    }
+    margin-top: -10px;
+    
+    &__logo {
+        width: 156px;
+        height: 73px;
+        background: green;
+        color: red;
+        max-width: 200px !important;
+/*        position: absolute;*/
+        display: inline;
+        float: left;
+        width: 14%;
+    }
+    
+    &__content {
+        float: left;
+        padding: 20px 0 0 10px;
+        margin: 0 auto;
+        width: 86%;
+        @mixin clearfix;
+        
+        &--form {
+            display: inline;
+/*            max-width: 10rem;*/
+            
+            &--input {
+                display: none;
+                height: 37px;
+                border: 2px solid $mainGray;
+                position: relative;
+                top: 1px;
+                
+                @mixin atMedium {
+                    display: inline;
+                    width: 34%;
+                }
+                @mixin atLarge {
+                  display: inline;
+                  width: 42%;
+                }
+                
+                &:hover {
+                -moz-box-shadow: 0px 0px 6px 0px rgba(51, 51, 51, 0.28);
+                -webkit-box-shadow: 0px 0px 6px 0px rgba(51, 51, 51, 0.28);
+                -ms-box-shadow: 0px 0px 6px 0px rgba(51, 51, 51, 0.28);
+                -o-box-shadow: 0px 0px 6px 0px rgba(51, 51, 51, 0.28);
+                box-shadow: 0px 0px 6px 0px rgba(51, 51, 51, 0.28);
+                outline: none;
+                transition: all .5s;
+            }
+
+            }
+            &--submit {
+                display: none;
+                
+                @mixin atMedium {
+                    border-right: 2px;
+                    border-left: 0px;
+                    border-top: 2px;
+                    border-bottom: 2px;
+                    border-color: $mainGray;
+                    border-style: solid;
+                    display: inline;
+                    position: relative;
+                    left: -5px;
+                    padding: 7px 25px 8px 15px;
+                    background-color: $mainRed;
+                    outline: none;
+                
+                &:hover {
+                background-color: rgba($mainRed, .8);
+                -moz-box-shadow: 0px 0px 16px 0px rgba(51, 51, 51, 0.28);
+                -webkit-box-shadow: 0px 0px 16px 0px rgba(51, 51, 51, 0.28);
+                -ms-box-shadow: 0px 0px 16px 0px rgba(51, 51, 51, 0.28);
+                -o-box-shadow: 0px 0px 16px 0px rgba(51, 51, 51, 0.28);
+                box-shadow: 0px 0px 16px 0px rgba(51, 51, 51, 0.28);
+                transition: all .5s;
+                cursor: pointer;
+            }
+                }
+            }
+        }
+        
+         &--float-sm {
+            float: right;
+             width: 85%;
+             
+             @mixin atSmall {
+                 float: none;
+                 width: auto
+             }
+        }
+        
+        &--innerfloat-sm {
+            display: flex;
+            flex-direction: row;
+/*            align-items: center;*/
+            flex-flow: row;
+            justify-content: flex-end;
+            
+            @mixin atSmall {
+                 display: inline;
+             }
+        }
+        
+        &--search--on-small {
+            color: #777;
+            font-size: 18px;
+            margin: 0 30px 0 0px;
+            @mixin atSmall {
+                margin: 0 30px;
+            }
+            
+            &:hover {
+                color: #333;
+                transition: all .5s;
+                cursor: pointer;
+            }
+            @mixin atMedium {
+                display: none;
+            }
+        }
+        
+        &--add-new {
+            padding: 10px 5px;
+            background-color: $mainRed;
+            color: #fff;
+            font-size: 12px;
+            display: none;
+            @mixin atSmall {
+                display: inline;
+                padding: 10px;
+                font-size: 14px;
+            }
+            
+            @mixin atLarge {
+                padding: 10px 20px;
+            }
+            
+            &:hover {
+                background-color: rgba($mainRed, .8);
+                font-size: 14px;
+                transition: all .5s;
+                cursor: pointer;
+            }
+        }
+        
+        
+        &--favorites {
+            margin: 0 10px 0 20px;
+            font-size: 20px;
+            color: $mainRed;
+            position: relative;
+            display: none;
+            top: 2px;
+            
+            @mixin atSmall {
+                display: inline;
+                 font-size: 22px;
+            }
+            
+            @mixin atMedium {
+                font-size: 22px;
+            }
+            
+            @mixin atLarge {
+               margin: 0 30px; 
+            }
+            
+             &:hover {
+                color: rgba($mainRed, .5);
+                transition: all .5s;
+                cursor: pointer;
+            }
+        }
+        &--notify {
+            margin: 0 10px 0 5px;
+            font-size: 18px;
+            color: #777;
+            position: relative;
+            top: 1px;
+            
+            @mixin atSmall {
+                margin: 0 30px 0 16px;
+                font-size: 22px;
+            }
+            
+             &:hover {
+                color: #333;
+                transition: all .5s;
+                cursor: pointer;
+            }
+        }
+        
+        &--categories {
+            margin: 0 10px 0 0px;
+            font-size: 15px;
+            color: #777;
+            
+            @mixin atSmall {
+                display: none;
+            }
+            
+            &:hover {
+                color: #333;
+                transition: all .5s;
+                cursor: pointer;
+            }
+        }
+        
+        &--account-details {
+            background-color: $mainGray;
+            padding: 20px 30px 2px 10px;
+            margin: 0 10px;
+            height: 2.5rem;
+            position: relative;
+            top: -13px;
+            
+            @mixin atSmall {
+                top: 7px;
+                padding: 20px 50px 2px 65px;
+                margin: 0;
+                height: 3rem;
+            }
+            
+            @mixin atMedium {
+                padding: 20px 70px 10px 80px;
+            }
+            
+                   
+            &__photo {
+                
+                width: 30px;
+                height: 30px;
+                border-radius: 15px;
+                overflow: hidden;
+                position: absolute;
+                top: 6.5%;
+                left: 6px;
+                @mixin atMedium {
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 20px;
+                    overflow: hidden;
+                    position: absolute;
+                    top: 6.5%;
+                    left: 6px;
+                }
+                
+            }
+            
+            &__user {
+                
+                    font-size: 12px;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    position: absolute;
+                    width: 0px;
+                    top: 12px;
+                    right: 30px;
+                    color: #777;
+                
+                @mixin atSmall {
+                    width: 40px;
+                    font-size: 14px;
+                 }
+                
+                @mixin atMedium { 
+                    width: 60px;
+                    top: 15px;
+                }
+            
+            }
+    
+            &__user--icon {
+                position: absolute;
+                float: right;
+                color: #777;
+                right: 3px;
+                font-size: 18px;
+                top: 5px;
+                
+                @mixin atMedium {
+                    font-size: 22px;
+                }
+            }
+            
+            
+        }
+        
+        &--account-details>span:hover, &--account-details:hover, &--account-details i {
+            color: #333; 
+            cursor: pointer;
+            background-color: rgba($mainGray, .5);
+            transition: all .5s;
+        }
+        
+        
+        
+        &--nav {
+            
+           
+            display: none;
+            top: 0;
+            left: 0;
+/*            padding: 0 20px;*/
+            background-color: #0f223e;
+            height: 100vh;
+            overflow-x: hidden;
+            overflow-y: auto;
+            
+            @mixin atSmall {
+                display: block;
+                height: auto;
+                position: relative;
+                top: auto;
+                left: auto;
+                background-color: transparent;
+                padding: 0;
+            }
+            
+            @mixin atMedium {
+                display: none;
+            }
+            
+            &__close-container {
+                
+                position: fixed;
+                left: 0;
+                width: 150px;
+                margin: 0 auto;
+                @mixin clearfix;
+                background-color: $mainBlue;
+                z-index: 2;
+
+                @mixin atSmall {
+                    display: none;
+                }
+                
+                &--botton {
+                    float: left;
+                    cursor: pointer;
+                    margin: 3px 5px;
+                    background-color: transparent;
+                    border: none;
+                    color: #fff;
+                    
+                    &:hover {
+                       color: $mainRed;    
+                    }
+                }
+                
+                &--icon {
+                    float: right;
+                    cursor: pointer;
+                    margin: 0px 15px;
+                    position: relative;
+                    top: 3px;
+                    color: #fff;
+                    
+                    &:hover {
+                       color: $mainRed;    
+                    }
+                }
+            }
+            
+
+            
+            a {
+                text-decoration: none;
+                color: #a0a0a0;
+                font-size: .875rem;
+                cursor: pointer;
+                
+                @mixin atSmall {
+                    color: #777;
+                }
+            }
+            
+            ul {
+                @mixin clearfix;
+                list-style: none;
+                width: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            
+            li {
+                cursor: pointer;
+                margin-bottom: 40px;
+                padding: 0 20px;
+                    
+                @mixin atSmall {
+                  float: left;
+                   margin: 0;
+                    padding: 0;
+                    font-size: 0.875rem;
+                    
+                    @mixin atSmall {
+                        margin: 25px 20px 0px 25px;
+                    }  
+                }
+                
+/*
+                &:hover{
+                    background-color: rgba($mainBlue, .2); 
+                    color: #fff;
+                    
+                    @mixin atSmall {
+                        background: transparent;
+                    }
+                }
+*/
+          
+            }
+            
+            li:last-child {
+                
+                @mixin atSmall {
+                    margin: 25px 0px 0px 10px;
+                }
+                
+                @mixin atLarge {
+                     margin: 30px 0px 10px 46px;
+                }
+            }
+            
+            li:first-child {
+                margin: 40px 10px 30px 0px;
+                
+                @mixin atSmall {
+                    margin: 25px 10px 0px 0px;
+                }
+            }
+            
+            a:hover {
+                color: #fff;
+                cursor: pointer;
+                transition: all .3s;
+                
+                @mixin atSmall {
+                    transition: all .3s;
+                    color: #333;
+                    cursor: pointer;
+                }
+            }
+            
+            &--hide-on-md {
+                display: block;
+                @mixin atSmall {
+                   display: none;
+                }
+                @mixin atLarge {
+                   display: block;
+                }
+            }
+            
+            &--hide-on-sm {
+                display: block;
+                @mixin atSmall {
+                   display: none; 
+                }
+                @mixin atMedium {
+                   display: block;
+                }
+            }
+            
+            &--hide-only-sm {
+                display: block;
+                @mixin atSmall {
+                   display: none; 
+                }
+            }
+            
+            &__categories {
+                position: relative;
+                
+                &--icon {
+                   font-size: .9rem;
+                    cursor: pointer;
+                    
+                    &:hover {
+                        color: #333;
+                        transition: all .3s;
+                    }
+                }
+                
+                &--content {
+                     display: none;
+                    position: relative;
+                    top: -32px;
+                    background-color: $mainBlue;
+                    left: -22px;
+                    
+                    @mixin atLarge {
+                        left: -30px;
+                        top: -25px;
+                    }
+                   
+                    li {
+                        float: none;
+                        margin: 0;
+                        padding: 2px;
+                        
+                    }
+                    
+                    &--hide-on-md {
+                        display: block;
+                        @mixin atLarge {
+                            display: none;
+                        }
+                        
+                    }
+                }
+             
+            }
+            &__items {
+                position: relative;
+                top: 10px;
+/*                border: 2px solid rgb(244, 244, 244);*/
+/*                background-color: rgba(#fff, .1);*/
+                display: none;
+                
+                @mixin atSmall {
+                    left: -20px;
+                    top: 10px;
+                    border: 2px solid rgb(244, 244, 244);
+                    background-color: rgb(241, 244, 243);
+                }
+                
+                 li {
+                    float: none;
+/*                    display: none;*/
+                     margin-bottom: 10px;
+                     font-size: 14px;
+                     padding: 5px 10px;
+                     color: #a0a0a0;
+                     cursor: pointer;
+                     
+                     @mixin atSmall {
+                         color: #777;
+                         margin: 10px 0;
+                         padding: 0 10px;
+                     }
+                      &:hover {
+                        color: #333;
+                        transition: all .3s;
+                        cursor: pointer;
+                        background-color: #fff;
+                        transition: all .5s;
+                    }
+                }
+                
+                li:last-child{
+                    margin: 0 0 0px 0;
+                    padding: 10px 10px;
+                    
+                    @mixin atSmall {
+                       margin: 15px 0;
+                       padding: 0 10px;
+                    }
+                }
+                li:first-child {
+                    margin: 10px 0 10px 0;
+                    padding: 5px  10px;
+                    @mixin atSmall {
+                      margin: 10px 0;
+                      padding: 10px 10px 0 10px;  
+                    }
+                }
+                
+            }
+        }
+        
+        
+        &--smaller-screen {
+         
+            ul {
+                list-style: none;
+                display: flex;
+                flex-direction: row;
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                flex-wrap: wrap;
+            }
+            
+            li {
+                padding: 0px 20px 0px 0;
+                font-size: 13px;
+                margin: 5px 0 0 0;
+                cursor: pointer;
+                color: #777;
+                
+                &:first-child {
+                    
+                }
+                
+                &:hover {
+                    color: #333;
+                }
+            }
+            
+            @mixin atSmall {
+                display: none;
+            }
+            
+        }
+        
+    }
+    @mixin atSmall {
+/*        background: red;*/
+    }
+    @mixin atMedium {
+/*        background: yellow;*/
+    }
+    @mixin atLarge{
+/*        background: red;*/
+    }
+
+}
+ 

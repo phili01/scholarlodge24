@@ -1,0 +1,330 @@
+.section-item {
+     background: #fff;
+    margin-top: 0px;
+    width: 14.375rem;
+    position: fixed;
+    top: 25px;
+    left: 0;
+    z-index: 4;
+    height: 100vh;
+    overflow: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 10px 10px 0px 10px ;
+    border: 1px solid $mainGray;
+    
+    @mixin atSmall {
+        width: 15rem;
+    }
+    
+    display: none;
+    @mixin atMedium {
+/*        background: $mainGray;*/
+        display: block;
+        margin-top: 10px;
+        z-index: 1;
+        width: auto;
+        position: relative;
+        top: 0;
+        padding: 10px 5px 10px 5px;
+        border-top: 1px solid $mainGray;
+        border-left: 1px solid $mainGray;
+        border-right: 1px solid $mainGray;
+        border-bottom: 1px solid $mainGray;
+/*        border: none;*/
+/*        @mixin border-color*/
+    }
+    
+    
+    &__close-container {
+        position: fixed;
+        left: 0;
+        width: 230px;
+        top: 0;
+        @mixin clearfix;
+        background-color: $mainBlue;
+        z-index: 2;
+            
+        
+        &--botton {
+            float: left;
+            cursor: pointer;
+            margin: 3px 5px;
+            background-color: transparent;
+            border: none;
+            color: #fff;
+
+            &:hover {
+               color: $mainRed;    
+            }
+        }
+
+        &--icon {
+            float: right;
+            cursor: pointer;
+            margin: 0px 15px;
+            position: relative;
+            top: 3px;
+            color: #fff;
+
+            &:hover {
+               color: $mainRed;    
+            }
+        }
+   
+        @mixin atSmall {
+            width: 15rem;
+        }
+
+        @mixin atLarge {
+           display: none;
+        }
+                
+    }
+    
+    &__top {
+        padding: 10px 0 10px 0px;
+        @mixin border-color;
+        background-color: #fff;
+/*        border: 2px solid $mainGray;*/
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            font-size: 0.94rem;
+        }
+        
+        li {
+            cursor: pointer;
+            padding: 10px 0 10px 0;
+            padding-left: 20px;
+            margin-bottom: 5px;
+            color: #777;
+            
+            
+            &:hover {
+               background-color: rgb(241, 244, 243);
+               color: #333;
+               box-shadow: 0px 0px 3px 0.63px rgba(83, 97, 125, 0.23);
+               -o-box-shadow: 0px 0px 3px 0.63px rgba(83, 97, 125, 0.23);
+                -ms-box-shadow: 0px 0px 3px 0.63px rgba(83, 97, 125, 0.23);
+                -webkit-box-shadow: 0px 0px 3px 0.63px rgba(83, 97, 125, 0.23);
+                -moz-box-shadow: 0px 0px 3px 0.63px rgba(83, 97, 125, 0.23);
+               transition: all .3s;
+ 
+/*border-left: 4px solid rgba(83, 97, 125, 0.23)*/
+            }
+            
+            &:first-child {
+                margin-bottom: 5px;
+                margin-top: 0;
+                padding-top: 15px;
+            }
+            
+            a {
+                position: relative;
+            }
+            
+            @mixin atLarge {
+                padding-left: 10px;
+                font-size: 0.94rem;
+            }
+        }
+        
+        
+        &--options {
+            display: none;
+            
+            li {
+                padding: 5px 0px 5px 30px;
+                font-size: 0.875rem;
+                margin: 5px 15px 5px 0;
+                
+                &:first-child {
+                    margin-bottom: 5px;
+                    padding-top: 5px;
+                    margin-top: 10px;
+                }
+                
+                &:hover {
+                    background-color: #fff;
+                    color: #333;
+                    box-shadow: none;
+                }
+            }
+        }
+        
+        &--seperate {
+/*            background-color: $mainGray;*/
+            height: 9px;
+            width: 100%;
+        }
+        
+    }
+    
+    &__middle {
+        padding: 0px 0 20px 0px;
+        margin-bottom: 10px;
+        @mixin border-color;
+        background-color: #fff;
+        
+        &--title {
+            font-size: 0.94rem;
+            text-align: center;
+            padding: 15px 0 5px 0 ;
+            margin: 0;
+        }
+        
+        &--close {
+            font-size: 0.94rem;
+            
+            &:hover {
+                color: red;
+            }
+        }
+
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 4px 0;
+            font-size: 14px;
+            max-height: 120px;
+            overflow-y: auto;
+            background-color: rgba($mainGray, .5);
+            border: 2px solid $mainGray
+        }
+        
+        li {
+            cursor: pointer;
+            padding: 10px 0;
+            padding-left: 20px;
+            margin-bottom: 5px;
+            color: #777;
+            
+            a {
+/*                background-color: $mainGray;*/
+                padding: 5px 0;
+                color: $mainBlue;
+                font-weight: 400;
+            }
+            
+            &:hover {
+               background-color: #fff;
+               color: #333;
+               box-shadow: 0px 0px 3px 0.63px rgba(83, 97, 125, 0.23);
+               -o-box-shadow: 0px 0px 3px 0.63px rgba(83, 97, 125, 0.23);
+               -ms-box-shadow: 0px 0px 3px 0.63px rgba(83, 97, 125, 0.23);
+               -webkit-box-shadow: 0px 0px 3px 0.63px rgba(83, 97, 125, 0.23);
+               -moz-box-shadow: 0px 0px 3px 0.63px rgba(83, 97, 125, 0.23);
+               font-weight: 100;
+               transition: all .3s;
+ 
+/*border-left: 4px solid rgba(83, 97, 125, 0.23)*/
+            }
+            
+            &:first-child {
+                margin-bottom: 5px;
+                font-weight: bold;
+                color: #333;
+                
+            }
+            
+            a {
+                position: relative;
+            }
+        }
+        
+        
+        &--addItems {
+            margin: 0 auto;
+            width: 60%;
+            position: relative;
+            left: 22%;
+            border-radius: 5px;
+            top: 10px;
+            cursor: pointer;
+            color: #fff;
+            font-size: 14px;
+            padding: 3px 3px;
+/*            border: 1.5px solid $mainBlue;*/
+            background-color: $mainRed;
+            
+            &:hover {
+                background-color: rgba($mainRed, .9);
+                
+            }
+        }
+    }
+    
+    &__bottom {
+         padding: 10px 0 10px 0px;
+        @mixin border-color;
+        background-color: #fff;
+/*        border: 2px solid $mainGray;*/
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            font-size: 15px;
+        }
+        
+        li {
+            cursor: pointer;
+            padding: 10px 0 10px 0;
+            padding-left: 20px;
+            margin-bottom: 5px;
+            color: #777;
+            
+            &:hover {
+               background-color: rgb(241, 244, 243);
+               color: #333;
+               box-shadow: 0px 0px 3px 0.63px rgba(83, 97, 125, 0.23);
+               -o-box-shadow: 0px 0px 3px 0.63px rgba(83, 97, 125, 0.23);
+                -ms-box-shadow: 0px 0px 3px 0.63px rgba(83, 97, 125, 0.23);
+                -webkit-box-shadow: 0px 0px 3px 0.63px rgba(83, 97, 125, 0.23);
+                -moz-box-shadow: 0px 0px 3px 0.63px rgba(83, 97, 125, 0.23);
+               transition: all .3s;
+ 
+/*border-left: 4px solid rgba(83, 97, 125, 0.23)*/
+            }
+            
+            &:first-child {
+                margin-bottom: 5px;
+                margin-top: 0;
+                padding-top: 15px;
+            }
+            
+            a {
+                position: relative;
+            }
+            
+            @mixin atLarge {
+                padding-left: 10px;
+            }
+        }
+        
+        
+        &--options {
+            display: none;
+            
+            li {
+                padding: 5px 0px 5px 30px;
+                font-size: 14px;
+                margin: 5px 15px 5px 0;
+                
+                &:first-child {
+                    margin-bottom: 5px;
+                    padding-top: 5px;
+                    margin-top: 10px;
+                }
+                
+                &:hover {
+                    background-color: #fff;
+                    color: #333;
+                    box-shadow: none;
+                }
+            }
+        }
+    }
+    
+}
